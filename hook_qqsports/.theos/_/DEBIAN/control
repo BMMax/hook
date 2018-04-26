@@ -1,0 +1,10 @@
+Package: com.mb.hookqqsports
+Name: hook_qqsports
+Depends: mobilesubstrate
+Architecture: iphoneos-arm
+Description: An awesome MobileSubstrate tweak!
+Maintainer: mb
+Author: mb
+Section: Tweaks
+Version: 0.0.1-18
+Installed-Size: 120
