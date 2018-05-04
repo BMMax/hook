@@ -55,8 +55,10 @@ QSLiveMediaPlayerViewController -> QSMPLiveLayersViewController-> QSMPLiveLayers
 
 
 新方法
-将-[TADSplashWindow initWith...] -> return nil 
+> 将-[TADSplashWindow initWith...] -> return nil 
 
 
+![](https://github.com/BMMax/hook/blob/master/hook_qqsports/img/2018-05-04_22-40-08.png)
 
+![](https://github.com/BMMax/hook/blob/master/hook_qqsports/img/2018-05-04_22-40-57.png)
 
