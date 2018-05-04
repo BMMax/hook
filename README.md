@@ -49,8 +49,14 @@ QSLiveMediaPlayerViewController -> QSMPLiveLayersViewController-> QSMPLiveLayers
 里的汇编
 `ldrb       w0, x0, x8` -> `mov w0, 0x01`
 
-启动图广告:
+启动图广告:(换图有错)
 `-[TADSplashWindow showSplash]:`
 `b -> nop `
+
+
+新方法
+将-[TADSplashWindow initWith...] -> return nil 
+
+
 
 
