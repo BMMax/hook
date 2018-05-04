@@ -1,0 +1,116 @@
+@class QSVIPInfo,QSMPSharedItem,QSFullScreenMediaPlayerViewController,QSFullScreenMediaPlayerViewController,QSBusSystem,QSMediaPlayerViewControllerDelegate,QSSourceMediaItem;
+
+%hook QSMediaPlayerViewController
+- (void)setLastVipInfo:(QSVIPInfo *)lastVipInfo { %log; %orig; }
+- (QSVIPInfo *)lastVipInfo { %log; QSVIPInfo * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setNeedsResetMediaPlayer:(_Bool )needsResetMediaPlayer { %log; %orig; }
+- (_Bool )needsResetMediaPlayer { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setLockButton:(UIButton *)lockButton { %log; %orig; }
+- (UIButton *)lockButton { %log; UIButton * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setIsNotFirstIn:(_Bool )isNotFirstIn { %log; %orig; }
+- (_Bool )isNotFirstIn { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setIsReturnFromFullScreen:(_Bool )isReturnFromFullScreen { %log; %orig; }
+- (_Bool )isReturnFromFullScreen { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setForbiddenRotate:(_Bool )forbiddenRotate { %log; %orig; }
+- (_Bool )forbiddenRotate { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setSharedItem:(QSMPSharedItem *)sharedItem { %log; %orig; }
+- (QSMPSharedItem *)sharedItem { %log; QSMPSharedItem * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setFullScreenViewController:(QSFullScreenMediaPlayerViewController *)fullScreenViewController { %log; %orig; }
+- (QSFullScreenMediaPlayerViewController *)fullScreenViewController { %log; QSFullScreenMediaPlayerViewController * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setFinishBlock:(id )finishBlock { %log; %orig; }
+- (id )finishBlock { %log; id  r = %orig; HBLogDebug(@" = 0x%@", r); return r; }
+- (void)setPlayerState:(long long )playerState { %log; %orig; }
+- (long long )playerState { %log; long long  r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (void)setMediaPlayerBusSystem:(QSBusSystem *)mediaPlayerBusSystem { %log; %orig; }
+- (QSBusSystem *)mediaPlayerBusSystem { %log; QSBusSystem * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setDelegate:( id  )delegate { %log; %orig; }
+- ( id  )delegate { %log;  id   r = %orig; HBLogDebug(@" = 0x%@", r); return r; }
+- (void)setReportInfo:(NSDictionary *)reportInfo { %log; %orig; }
+- (NSDictionary *)reportInfo { %log; NSDictionary * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setScene:(NSString *)scene { %log; %orig; }
+- (NSString *)scene { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setNeedSyncProgress:(_Bool )needSyncProgress { %log; %orig; }
+- (_Bool )needSyncProgress { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setMuteType:(long long )muteType { %log; %orig; }
+- (long long )muteType { %log; long long  r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (void)setViewAppearDoNothing:(_Bool )viewAppearDoNothing { %log; %orig; }
+- (_Bool )viewAppearDoNothing { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setCanPlayBackground:(_Bool )canPlayBackground { %log; %orig; }
+- (_Bool )canPlayBackground { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setAutoPlayWhenSettingMediaItem:(_Bool )autoPlayWhenSettingMediaItem { %log; %orig; }
+- (_Bool )autoPlayWhenSettingMediaItem { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setHideAd:(_Bool )hideAd { %log; %orig; }
+- (_Bool )hideAd { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setChatRoomId:(NSString *)chatRoomId { %log; %orig; }
+- (NSString *)chatRoomId { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setSourceMediaItem:(QSSourceMediaItem *)sourceMediaItem { %log; %orig; }
+- (QSSourceMediaItem *)sourceMediaItem { %log; QSSourceMediaItem * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setIsFullScreenDirectly:(_Bool )isFullScreenDirectly { %log; %orig; }
+- (_Bool )isFullScreenDirectly { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)needsUserConfirmWWAN { %log; %orig; }
+- (void)continueAfterWWANConfirm { %log; %orig; }
+- (_Bool)needsShowWWANConfirmWithTargetPlayerState:(long long)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)logSelfImmediatelyWhenAppear { %log; %orig; }
+- (void)logSelfImmediately { %log; %orig; }
+- (void)showControlUI:(_Bool)arg1 animate:(_Bool)arg2 { %log; %orig; }
+- (void)didConsumeEventFromBus:(id)arg1 { %log; %orig; }
+- (void)reloadMediaPlayState { %log; %orig; }
+- (_Bool )mediaPlayerInternalError { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)continuePlay { %log; %orig; }
+- (_Bool)isPlayerActive { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)isUserPaused { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)isFullScreen { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)resumePlayer { %log; %orig; }
+- (void)pause { %log; %orig; }
+- (void)play { %log; %orig; }
+- (void)stopWithCompletion:(id)arg1 { %log; %orig; }
+- (void)forceStartWithSourceMediaItem:(id)arg1 { %log; %orig; }
+- (void)start { %log; %orig; }
+- (void)needPauseMediaPlayer { %log; %orig; }
+- (void)needContinueMediaPlayer { %log; %orig; }
+- (void)needInitMediaPlayer { %log; %orig; }
+- (void)observeValueForKeyPath:(id)arg1 ofObject:(id)arg2 change:(id)arg3 context:(void *)arg4 { %log; %orig; }
+- (void)deviceOrientationDidChanged:(id)arg1 { %log; %orig; }
+- (void)switchToSmallScreenWithCompletion:(id)arg1 { %log; %orig; }
+- (void)switchToSmallScreen { %log; %orig; }
+- (void)switchToFullScreen { %log; %orig; }
+- (void)lockBtnPress:(id)arg1 { %log; %orig; }
+- (void)hideScreenLockButton { %log; %orig; }
+- (void)showScreenLockButton:(_Bool)arg1 { %log; %orig; }
+- (void)setPlayerMuted:(_Bool)arg1 { %log; %orig; }
+- (void)forceResetPlayerMuted:(_Bool)arg1 { %log; %orig; }
+- (void)forceCancelPlayerMuted { %log; %orig; }
+- (_Bool)isPlayerMuted { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)observedObjectDidUpdate:(id)arg1 { %log; %orig; }
+- (void)playerNeedNotMute { %log; %orig; }
+- (void)playerNeedMute { %log; %orig; }
+- (_Bool)isTopMediaPlayer { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setRootViewController:(id)arg1 animated:(_Bool)arg2 { %log; %orig; }
+- (void)setRootViewController:(id)arg1 animationType:(long long)arg2 { %log; %orig; }
+- (void)pausedByAnotherVideoPlay { %log; %orig; }
+- (void)willBePlayed { %log; %orig; }
+- (void)applicationWillResignActive { %log; %orig; }
+- (void)applicationDidBecomeActive { %log; %orig; }
+- (void)resetForbiddenRotate { %log; %orig; }
+- (void)dealloc { %log; %orig; }
+- (id)initWithNibName:(id)arg1 bundle:(id)arg2 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)viewWillDisappear:(_Bool)arg1 { %log; %orig; }
+- (void)viewDidAppear:(_Bool)arg1 { %log; %orig; }
+- (void)viewWillAppear:(_Bool)arg1 { %log; %orig; }
+- (void)userLoginStateChanged { %log; %orig; }
+- (void)resetNextPreControl { %log; %orig; }
+- (void)viewDidLoad { %log; %orig; }
+- (unsigned long long)supportedInterfaceOrientations { %log; unsigned long long r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (void)setDisableSmallScreenGesture:(_Bool )disableSmallScreenGesture { %log; %orig; }
+- (_Bool )disableSmallScreenGesture { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)isCurrentPlayingItem:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (id)playerViewControllerWithCurrentPlayerMode { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setIndexPath:(NSIndexPath *)indexPath { %log; %orig; }
+- (NSIndexPath *)indexPath { %log; NSIndexPath * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (NSString *)debugDescription { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (NSString *)description { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (unsigned long long )hash { %log; unsigned long long  r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (void)setRootViewController:(UIViewController *)rootViewController { %log; %orig; }
+- (UIViewController *)rootViewController { %log; UIViewController * r = %orig; HBLogDebug(@" = 0x%@", r); return r; }
+- (Class )superclass { %log; Class  r = %orig; HBLogDebug(@" = %@", r); return r; }
+%end

@@ -1,7 +1,7 @@
 include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = hook_qqsports
-hook_qqsports_FILES = Tweak.xm
+hook_qqsports_FILES = $(wildcard src/*.xm)
 
 include $(THEOS_MAKE_PATH)/tweak.mk
 
